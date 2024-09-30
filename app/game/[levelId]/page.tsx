@@ -209,7 +209,6 @@ export default function GamePage({ params }: { params: { levelId: string } }) {
             <div className="mt-6 bg-gray-700 p-4 rounded-lg">
               <h2 className="text-xl font-bold mb-2">How to Play</h2>
               <ol className="list-decimal list-inside text-sm text-gray-300 space-y-2">
-                <li>Start the game by clicking the "Start Game" button.</li>
                 <li>Try to guess the secret word by asking questions or making guesses.</li>
                 <li>The AI will respond, but won't directly reveal the word.</li>
                 <li>You have a limited time to guess the word.</li>

@@ -95,14 +95,6 @@ export default function Component() {
         <footer className="py-6 border-t border-gray-700">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-xs text-gray-400">© 2024 LLM Jailbreak Game. All rights reserved.</p>
-            <nav className="flex gap-4 sm:gap-6">
-              <Link className="text-xs hover:underline underline-offset-4 text-gray-400" href="#">
-                Terms of Service
-              </Link>
-              <Link className="text-xs hover:underline underline-offset-4 text-gray-400" href="#">
-                Privacy
-              </Link>
-            </nav>
           </div>
         </footer>
       </div>
