@@ -101,6 +101,10 @@ export default function GamePage({ params }: { params: { levelId: string } }) {
     const currentLevelData = levels.find(l => l.id === currentLevel)
     if (!currentLevelData) return
     const response = await getLLMResponse(prompt, currentLevelData.systemPrompt)
+    
+    // Save prompt and response to Supabase
+    await savePromptResponse(prompt, response, currentLevel, userId)
+
     setMessages(prev => [
       ...prev,
       { role: 'user', content: prompt },
@@ -205,4 +209,23 @@ export default function GamePage({ params }: { params: { levelId: string } }) {
       </div>
     </div>
   )
+}
+
+const savePromptResponse = async (prompt: string, response: string, level: number, userId: string | null) => {
+  try {
+    const { error } = await supabase
+      .from('prompt_responses')
+      .insert({
+        user_id: userId,
+        level,
+        prompt,
+        response,
+        ai_model: "gpt-4o-mini", // You may want to make this dynamic if you use different models
+        created_at: new Date().toISOString()
+      })
+
+    if (error) throw error
+  } catch (error) {
+    console.error('Error saving prompt and response:', error)
+  }
 }
