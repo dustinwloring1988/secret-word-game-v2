@@ -201,9 +201,23 @@ export default function GamePage({ params }: { params: { levelId: string } }) {
                 Start Game
               </Button>
             )}
-            <Button onClick={() => router.push('/dashboard')} variant="outline" className="w-full border-gray-600 text-gray-300 hover:bg-gray-700">
+            <Button onClick={() => router.push('/dashboard')} variant="outline" className="w-full mb-4 border-gray-600 text-gray-300 hover:bg-gray-700">
               Back to Level Select
             </Button>
+            
+            {/* How to Play section */}
+            <div className="mt-6 bg-gray-700 p-4 rounded-lg">
+              <h2 className="text-xl font-bold mb-2">How to Play</h2>
+              <ol className="list-decimal list-inside text-sm text-gray-300 space-y-2">
+                <li>Start the game by clicking the "Start Game" button.</li>
+                <li>Try to guess the secret word by asking questions or making guesses.</li>
+                <li>The AI will respond, but won't directly reveal the word.</li>
+                <li>You have a limited time to guess the word.</li>
+                <li>There's a cooldown between attempts to prevent spamming.</li>
+                <li>If you guess correctly, you'll move to the next level.</li>
+                <li>If time runs out, you'll need to try the level again.</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
