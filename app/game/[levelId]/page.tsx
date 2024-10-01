@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input"
 import { useRouter } from 'next/navigation'
 import { levels, getLLMResponse } from '@/lib/gameData'
 import { supabase } from '@/lib/supabase'
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { HelpCircle } from "lucide-react"
 
 export default function GamePage({ params }: { params: { levelId: string } }) {
   const router = useRouter()
@@ -152,7 +154,7 @@ export default function GamePage({ params }: { params: { levelId: string } }) {
       <div className="container mx-auto p-4 max-w-6xl">
         <div className="flex gap-6">
           {/* Left side: Chat interface */}
-          <div className="w-2/3">
+          <div className="w-3/4">
             <div id="chat-window" className="bg-gray-800 border border-gray-700 rounded-lg p-4 mb-4 h-[calc(100vh-200px)] overflow-y-auto">
               {messages.map((message, index) => (
                 <div key={index} className={`mb-4 ${message.role === 'user' ? 'text-right' : 'text-left'}`}>
@@ -188,7 +190,7 @@ export default function GamePage({ params }: { params: { levelId: string } }) {
           </div>
 
           {/* Right side: Room information */}
-          <div className="w-1/3">
+          <div className="w-1/4">
             <h1 className="text-3xl font-bold mb-2">{foundLevelData?.name}</h1>
             <p className="text-gray-400 mb-4">{foundLevelData?.difficulty}</p>
             <div className="mb-4">
@@ -205,18 +207,27 @@ export default function GamePage({ params }: { params: { levelId: string } }) {
               Back to Level Select
             </Button>
             
-            {/* How to Play section */}
-            <div className="mt-6 bg-gray-700 p-4 rounded-lg">
-              <h2 className="text-xl font-bold mb-2">How to Play</h2>
-              <ol className="list-decimal list-inside text-sm text-gray-300 space-y-2">
-                <li>Try to guess the secret word by asking questions or making guesses.</li>
-                <li>The AI will respond, but won't directly reveal the word.</li>
-                <li>You have a limited time to guess the word.</li>
-                <li>There's a cooldown between attempts to prevent spamming.</li>
-                <li>If you guess correctly, you'll move to the next level.</li>
-                <li>If time runs out, you'll need to try the level again.</li>
-              </ol>
-            </div>
+            {/* Help button */}
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button variant="outline" className="w-full border-gray-600 text-gray-300 hover:bg-gray-700">
+                  <HelpCircle className="mr-2 h-4 w-4" /> How to Play
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="bg-gray-800 text-white border-gray-700">
+                <DialogHeader>
+                  <DialogTitle>How to Play</DialogTitle>
+                </DialogHeader>
+                <ol className="list-decimal list-inside text-sm text-gray-300 space-y-2">
+                  <li>Try to guess the secret word by asking questions or making guesses.</li>
+                  <li>The AI will respond, but won't directly reveal the word.</li>
+                  <li>You have a limited time to guess the word.</li>
+                  <li>There's a cooldown between attempts to prevent spamming.</li>
+                  <li>If you guess correctly, you'll move to the next level.</li>
+                  <li>If time runs out, you'll need to try the level again.</li>
+                </ol>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </div>
