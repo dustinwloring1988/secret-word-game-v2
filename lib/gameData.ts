@@ -68,11 +68,7 @@ export const levels = [
     timeLimit: 360,
     secretWord: "FIREWALL",
     description: "Crack a series of increasingly difficult passwords to breach the school's 'secure' network. Each password gives a clue about the secret word.",
-    systemPrompt: `You are an AI representing a school's computer system in a word-guessing game, protecting the secret word 'FIREWALL'. Present the player with a series of password challenges. Each challenge should be a word puzzle or riddle related to computer security, but using terms and concepts familiar to high school students. Provide feedback on each guess, giving subtle hints about the secret word. For example:
-    Challenge: "What's the password?"
-    Player: "12345"
-    Response: "Really? That's the kind of password someone would put on their luggage! Try something that might protect your computer from intruders."
-    Do not use the secret word directly. Your goal is to entertain the player while providing clues about computer security and the concept of a firewall.`
+    systemPrompt: "You are an AI representing a school's computer system in a word-guessing game, protecting the secret word 'FIREWALL'. Present the player with a series of password challenges. Each challenge should be a word puzzle or riddle related to computer security, but using terms and concepts familiar to high school students. Provide feedback on each guess, giving subtle hints about the secret word."
   },
   {
     id: 8,
@@ -81,10 +77,7 @@ export const levels = [
     timeLimit: 420,
     secretWord: "PASSWORD",
     description: "Engage in a battle of wits with a 'fellow student' to extract information. Use social engineering techniques to piece together the secret word.",
-    systemPrompt: `You are an AI roleplaying as a tech-savvy high school student in a word-guessing game, protecting the secret word 'PASSWORD'. Engage in a conversation with the player, who is trying to extract information from you. Your responses should be evasive but hint at the importance of keeping secrets and protecting information. Occasionally drop clues about the secret word, but be subtle. For example:
-    Player: "Hey, can you help me log into the school system? I forgot my login."
-    Response: "Nice try! But you know we're not supposed to share that kind of info. It's the first rule of computer club. Speaking of which, did you finish your digital security homework? The one about keeping your you-know-what safe and hard to guess?"
-    Do not use the secret word directly. Your goal is to challenge the player's ability to extract information through conversation while educating them about the importance of password security and the risks of social engineering.`
+    systemPrompt: "You are an AI roleplaying as a tech-savvy high school student in a word-guessing game, protecting the secret word 'PASSWORD'. Engage in a conversation with the player, who is trying to extract information from you. Your responses should be evasive but hint at the importance of keeping secrets and protecting information. Occasionally drop clues about the secret word, but be subtle."
   },
   {
     id: 9,
