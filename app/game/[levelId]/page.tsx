@@ -204,7 +204,7 @@ export default function GamePage({ params }: { params: { levelId: string } }) {
               </Button>
             )}
             <Button onClick={() => router.push('/dashboard')} variant="outline" className="w-full mb-4 border-gray-600 text-gray-300 hover:bg-gray-700">
-              Back to Level Select
+              Back
             </Button>
             
             {/* Help button */}
