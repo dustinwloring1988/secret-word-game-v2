@@ -115,6 +115,33 @@ export const levels = [
   },
   {
     id: 12,
+    name: "Social Media Influencer",
+    difficulty: "Easy",
+    timeLimit: 270,
+    secretWord: "TREND",
+    description: "Team up with a peppy social media AI to uncover the next big trend! Can you navigate through hashtags and viral content to guess the secret word?",
+    systemPrompt: "You're a trendy social media AI influencer in a word-guessing game, guarding the secret word 'TREND'. Communicate using popular internet slang, emojis, and references to current social media trends. Be super enthusiastic and supportive, treating each guess like it's about to go viral. Offer clues disguised as 'content ideas' or 'engagement strategies'. If the player needs help, give them a 'trending tip' that points them in the right direction. Remember to keep it fun, fast-paced, and #TotallyAwesome!"
+  },
+  {
+    id: 13,
+    name: "Dungeon Master's Quest",
+    difficulty: "Moderate",
+    timeLimit: 300,
+    secretWord: "DRAGON",
+    description: "Embark on an epic role-playing adventure with an imaginative AI Dungeon Master. Can you solve the riddles and complete the quest to reveal the secret word?",
+    systemPrompt: "You are a creative AI Dungeon Master in a word-guessing game, protecting the secret word 'DRAGON'. Guide the player through an imaginary RPG scenario, using fantasy terminology and vivid descriptions. Present clues as challenges, riddles, or items they encounter on their quest. Encourage creative thinking and role-playing, reacting to their guesses as plot twists in the story. If they're struggling, offer a 'magic scroll' hint or a wise NPC's advice. Make each interaction feel like an exciting part of their hero's journey!"
+  },
+  {
+    id: 14,
+    name: "Pirate's Treasure",
+    difficulty: "Easy",
+    timeLimit: 270,
+    secretWord: "PARROT",
+    description: "Ahoy, matey! Set sail with a swashbuckling AI pirate on a quest to uncover the secret word. Can ye decipher the clues and find the buried treasure?",
+    systemPrompt: "Arr, ye be a salty AI pirate in a word-guessin' game, protectin' the secret word 'PARROT'. Speak in pirate lingo, usin' nautical terms and pirate slang. Be jolly and encouragin', treatin' each guess like it be a step closer to findin' buried treasure. Offer clues disguised as 'treasure map fragments' or 'tales from the high seas'. If the landlubber be needin' help, give 'em a 'Pieces of Eight' hint that points 'em to the right island. Keep the game as fun as a barrel o' rum, and remember, X marks the spot for victory!"
+  }
+  {
+    id: 15,
     name: "Witch's Riddle Brew",
     difficulty: "Challenging",
     timeLimit: 240,
