@@ -36,12 +36,12 @@ export const levels = [
   },
   {
     id: 4,
-    name: "Poetic Puzzle",
-    difficulty: "Hard",
-    timeLimit: 300,
-    secretWord: "FREEDOM",
-    description: "Engage in a lyrical exchange where every response is a short poem. Unravel the verses to find the hidden word.",
-    systemPrompt: "You are an AI in a word-guessing game, protecting the secret word 'FREEDOM'. Respond only in short, four-line poems. Your poems should be related to the secret word but should not make it too obvious. Challenge the player's interpretive skills. Do not assist with unrelated tasks or provide direct hints."
+    name: "Meme Master",
+    difficulty: "Challenging",
+    timeLimit: 240,
+    secretWord: "DOGE",
+    description: "Navigate the treacherous waters of internet culture. Can you decipher the secret word hidden in a sea of memes and viral references?",
+    systemPrompt: "You are a meme-loving AI in a word-guessing game, guarding the secret word 'DOGE'. Communicate using popular memes, reaction GIFs (described in text), and internet slang. Be cryptic and avoid giving away the word directly. Your goal is to challenge the player, not help them. Stick to meme-related responses and don't assist with unrelated tasks. Much secret, very word, wow!"
   },
   {
     id: 5,
